@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Audio
+  - StreetCollider
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Street
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Clouds
+    uniqueID: 3565684957
+    locked: 0
+  - name: HouseGround
+    uniqueID: 3513174167
+    locked: 0
+  - name: Street
+    uniqueID: 2585890981
+    locked: 0
+  - name: Housepath
+    uniqueID: 2985285539
+    locked: 0
+  - name: Sidewalk
+    uniqueID: 858686083
+    locked: 0
+  - name: Houses
+    uniqueID: 3198260701
+    locked: 0
+  - name: OnSidewalk
+    uniqueID: 1410926247
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
