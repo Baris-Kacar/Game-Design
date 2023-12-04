@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -121,133 +121,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: IDLE_L_UNARMEDE_0
-      rect:
-        serializedVersion: 2
-        x: 159
-        y: 0
-        width: 804
-        height: 1090
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5cd212a4b4bee904e89d578f08395238
-      internalID: -1078121252
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: IDLE_L_UNARMEDE_1
-      rect:
-        serializedVersion: 2
-        x: 1182
-        y: 0
-        width: 804
-        height: 1090
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 06964e0c8a351e041abaed2da2a91ba5
-      internalID: -1286154785
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: IDLE_L_UNARMEDE_2
-      rect:
-        serializedVersion: 2
-        x: 2205
-        y: 0
-        width: 804
-        height: 1090
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 022406a5d50a1754498c37c99a6a9158
-      internalID: 977344064
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: IDLE_L_UNARMEDE_3
-      rect:
-        serializedVersion: 2
-        x: 3231
-        y: 0
-        width: 804
-        height: 1090
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 20aea553af21af74680f2baea8a5667e
-      internalID: -128952284
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: IDLE_L_UNARMEDE_4
-      rect:
-        serializedVersion: 2
-        x: 4254
-        y: 0
-        width: 804
-        height: 1090
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e436e80d8bc01484aa0b29d729ce06af
-      internalID: 1178987838
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: IDLE_L_UNARMEDE_5
-      rect:
-        serializedVersion: 2
-        x: 5277
-        y: 0
-        width: 804
-        height: 1090
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d1c61efbb5964dd42a83b98d2571dffd
-      internalID: -549155606
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -258,13 +132,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      IDLE_L_UNARMEDE_0: -1078121252
-      IDLE_L_UNARMEDE_1: -1286154785
-      IDLE_L_UNARMEDE_2: 977344064
-      IDLE_L_UNARMEDE_3: -128952284
-      IDLE_L_UNARMEDE_4: 1178987838
-      IDLE_L_UNARMEDE_5: -549155606
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

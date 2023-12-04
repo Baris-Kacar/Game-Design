@@ -149,8 +149,8 @@ RectTransform:
   m_GameObject: {fileID: 8689047}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 3.35, y: 3.35, z: 3.35}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 367909751}
   - {fileID: 1678011318}
@@ -6765,8 +6765,8 @@ RectTransform:
   m_GameObject: {fileID: 693208052}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 7.232924, y: 7.232924, z: 7.232924}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 16.91, y: 16.91, z: 16.91}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 564632748}
   - {fileID: 861361370}
@@ -9893,7 +9893,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -6759101658244536947, guid: 3ba412228d94ffd42b7b6bfa14972781, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.043
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -10477,7 +10477,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSource: {fileID: 1741180232}
   SFXSource: {fileID: 1387047411}
-  background: {fileID: 0}
+  background: {fileID: 8300000, guid: eb6384e86191be540a82b6f269bf120b, type: 3}
   death: {fileID: 0}
   checkpoint: {fileID: 0}
 --- !u!1 &2102375640

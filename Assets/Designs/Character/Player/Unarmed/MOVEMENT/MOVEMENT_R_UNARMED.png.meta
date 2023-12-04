@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -121,133 +121,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: MOVEMENT_R_UNARMED_0
-      rect:
-        serializedVersion: 2
-        x: 63
-        y: 0
-        width: 804
-        height: 1090
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cf68d45de635bb748915a92f669b109e
-      internalID: -1888620708
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MOVEMENT_R_UNARMED_1
-      rect:
-        serializedVersion: 2
-        x: 1086
-        y: 0
-        width: 804
-        height: 1090
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4ed5e6e1842f6264190fafe43fffcbef
-      internalID: 1330106858
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MOVEMENT_R_UNARMED_2
-      rect:
-        serializedVersion: 2
-        x: 2109
-        y: 0
-        width: 804
-        height: 1090
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7a51a5ebb9414894f8023707e274be67
-      internalID: 1167058957
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MOVEMENT_R_UNARMED_3
-      rect:
-        serializedVersion: 2
-        x: 3135
-        y: 0
-        width: 804
-        height: 1090
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fa342fe32d3a36744a1da6c8cef44845
-      internalID: 429495657
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MOVEMENT_R_UNARMED_4
-      rect:
-        serializedVersion: 2
-        x: 4158
-        y: 0
-        width: 804
-        height: 1090
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 818fcd22af96e074aa66a82ad9e6e431
-      internalID: 479208749
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MOVEMENT_R_UNARMED_5
-      rect:
-        serializedVersion: 2
-        x: 5181
-        y: 0
-        width: 804
-        height: 1090
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dcb175b262c3213488126913f784492c
-      internalID: -1043406864
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -258,13 +132,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      MOVEMENT_R_UNARMED_0: -1888620708
-      MOVEMENT_R_UNARMED_1: 1330106858
-      MOVEMENT_R_UNARMED_2: 1167058957
-      MOVEMENT_R_UNARMED_3: 429495657
-      MOVEMENT_R_UNARMED_4: 479208749
-      MOVEMENT_R_UNARMED_5: -1043406864
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

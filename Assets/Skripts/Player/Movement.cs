@@ -17,18 +17,16 @@ public class Movement : MonoBehaviour
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
-        // Check if the character is moving
-        bool isMoving = (horizontalInput != 0f || verticalInput != 0f);
-
-        // Debug statement to check if isMoving is being set correctly
-        Debug.Log("isRunning: " + isMoving);
-
-        // Set the "isRunning" parameter in the Animator
-        animator.SetBool("isRunning", isMoving);
+        // Set the "isMovingRight" and "isMovingLeft" parameters in the Animator
+        animator.SetBool("isMovingRight", horizontalInput > 0f);
+        animator.SetBool("isMovingLeft", horizontalInput < 0f);
 
         // Move the character based on input
         Vector3 movement = new Vector3(horizontalInput, verticalInput, 0f) * moveSpeed * Time.deltaTime;
         transform.Translate(movement);
-
+        
+        
     }
 }
+
+

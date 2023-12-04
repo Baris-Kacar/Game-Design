@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -126,10 +126,10 @@ TextureImporter:
       name: MOVEMENT_L_PISTOL_0
       rect:
         serializedVersion: 2
-        x: 159
+        x: 158
         y: 0
-        width: 804
-        height: 1090
+        width: 806
+        height: 1120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,8 +137,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 23eeb99a862352042a3570109957a3eb
-      internalID: 259498849
+      spriteID: 287d5b80c1ac46440ac77f4938ad5cec
+      internalID: 326862101
       vertices: []
       indices: 
       edges: []
@@ -147,10 +147,10 @@ TextureImporter:
       name: MOVEMENT_L_PISTOL_1
       rect:
         serializedVersion: 2
-        x: 1182
+        x: 1181
         y: 0
-        width: 804
-        height: 1090
+        width: 806
+        height: 1120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,8 +158,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 60469ef9aaa38674f8725c1d2ea51fa1
-      internalID: -805031363
+      spriteID: e6e0e800165746641a735624e215eb76
+      internalID: -1015098484
       vertices: []
       indices: 
       edges: []
@@ -168,10 +168,10 @@ TextureImporter:
       name: MOVEMENT_L_PISTOL_2
       rect:
         serializedVersion: 2
-        x: 2205
+        x: 2204
         y: 0
-        width: 804
-        height: 1090
+        width: 806
+        height: 1120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,8 +179,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 601997a86428085499ce522a71bad4bd
-      internalID: 112163498
+      spriteID: 44caea315c4ae7643acbe8f9675294b8
+      internalID: 417413680
       vertices: []
       indices: 
       edges: []
@@ -189,10 +189,10 @@ TextureImporter:
       name: MOVEMENT_L_PISTOL_3
       rect:
         serializedVersion: 2
-        x: 3231
+        x: 3230
         y: 0
-        width: 804
-        height: 1090
+        width: 806
+        height: 1120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,8 +200,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5617a285bcc073a43ad51098f8075cb4
-      internalID: 2146419650
+      spriteID: c9e10a3ef2acae54199d25a058fcd054
+      internalID: 1825197307
       vertices: []
       indices: 
       edges: []
@@ -210,10 +210,10 @@ TextureImporter:
       name: MOVEMENT_L_PISTOL_4
       rect:
         serializedVersion: 2
-        x: 4254
+        x: 4253
         y: 0
-        width: 804
-        height: 1090
+        width: 806
+        height: 1120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,8 +221,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f81bc040b4e73cf449abb723be3aa9b4
-      internalID: -1850372185
+      spriteID: 771703f32c3564042b1c239db2fbb4c3
+      internalID: 614000752
       vertices: []
       indices: 
       edges: []
@@ -231,10 +231,10 @@ TextureImporter:
       name: MOVEMENT_L_PISTOL_5
       rect:
         serializedVersion: 2
-        x: 5277
+        x: 5276
         y: 0
-        width: 804
-        height: 1090
+        width: 806
+        height: 1120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -242,8 +242,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ac8566824873754daacc5ed91b21c6f
-      internalID: 1875385018
+      spriteID: c79ae42224d19494598acc6378c06323
+      internalID: 782257088
       vertices: []
       indices: 
       edges: []
@@ -259,12 +259,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      MOVEMENT_L_PISTOL_0: 259498849
-      MOVEMENT_L_PISTOL_1: -805031363
-      MOVEMENT_L_PISTOL_2: 112163498
-      MOVEMENT_L_PISTOL_3: 2146419650
-      MOVEMENT_L_PISTOL_4: -1850372185
-      MOVEMENT_L_PISTOL_5: 1875385018
+      MOVEMENT_L_PISTOL_0: 326862101
+      MOVEMENT_L_PISTOL_1: -1015098484
+      MOVEMENT_L_PISTOL_2: 417413680
+      MOVEMENT_L_PISTOL_3: 1825197307
+      MOVEMENT_L_PISTOL_4: 614000752
+      MOVEMENT_L_PISTOL_5: 782257088
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
