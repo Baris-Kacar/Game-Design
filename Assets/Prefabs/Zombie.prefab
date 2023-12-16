@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 2489194821688343346}
   - component: {fileID: 6176466596334507671}
   - component: {fileID: 6877356106803427026}
-  - component: {fileID: 5074150650738302740}
+  - component: {fileID: 7272927795602178456}
+  - component: {fileID: -7583654491835650000}
   m_Layer: 0
   m_Name: Zombie
   m_TagString: Untagged
@@ -77,7 +78,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: -377867335, guid: e4f6c0d377843bf449f573429cc2f8bd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -122,8 +123,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a92ab3d827b29e4ab39ced7672191ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detectionRange: 5
-  moveSpeed: 3
+  detectionRange: 15
+  attackRange: 1
+  attackTriggerDistance: 3
+  moveSpeed: 4
+  attackCooldown: 3
 --- !u!50 &6176466596334507671
 Rigidbody2D:
   serializedVersion: 4
@@ -180,7 +184,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -196,7 +200,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6.82, y: 8.06}
   m_EdgeRadius: 0
---- !u!114 &5074150650738302740
+--- !u!114 &7272927795602178456
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -205,6 +209,54 @@ MonoBehaviour:
   m_GameObject: {fileID: 5050472777453078451}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dac37f6d40758400eacfa78b2ffa23c1, type: 3}
+  m_Script: {fileID: 11500000, guid: 8d5a688452cebf04abaf00e54cc2d3b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
+  damage: 1
+  deathEffect: {fileID: 9060801774573828179, guid: 8fc3d65190fd6474f8e5f48f39f9904f, type: 3}
+--- !u!61 &-7583654491835650000
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5050472777453078451}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 7.1517467, y: 8.06}
+    newSize: {x: 7.1517467, y: 8.06}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 7.1517467, y: 8.06}
+  m_EdgeRadius: 0
