@@ -519,18 +519,6 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 1003701160840601284, guid: ad5680b884a85ed4ca0e56d66d2fbaad, type: 3}
   m_PrefabInstance: {fileID: 3290691617699497935}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &536712427
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 536712412}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 060425c40b854cd4d91cf5fb3f562b4c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &536712428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -616,13 +604,47 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 536712412}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16758b50cea96a74ab49954b4ccad83d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 134915654}
   bulletPrefeb: {fileID: 2285231100818994016, guid: d389c1555694d5c41b9708b069ebd17f, type: 3}
+--- !u!50 &536712436 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 4018944114623219645, guid: ad5680b884a85ed4ca0e56d66d2fbaad, type: 3}
+  m_PrefabInstance: {fileID: 3290691617699497935}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &536712440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536712412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d64ba3c5e5e80149987f039b0b6ed8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MovementSmoothing: 0.05
+  m_Rigidbody2D: {fileID: 536712436}
+--- !u!114 &536712441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536712412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 536f8d0f02f0ecb4096fef497279b5f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 536712440}
+  runSpeed: 20
+  dashSpeed: 40
 --- !u!20 &553807930 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 2119302919868505181, guid: 71f65a9b3c024d845833e9639bbe1cb8, type: 3}
@@ -1644,7 +1666,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 176.59998, y: -67.399994}
+  m_AnchoredPosition: {x: 176.59995, y: -67.399994}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1475578786
@@ -2214,6 +2236,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1003701160840601284, guid: ad5680b884a85ed4ca0e56d66d2fbaad, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 42920eba8ea77214cabe9884a3caf413, type: 2}
     - target: {fileID: 1748008716374560500, guid: ad5680b884a85ed4ca0e56d66d2fbaad, type: 3}
       propertyPath: m_Size.y
       value: 7.09
@@ -2272,7 +2298,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8127202013584545707, guid: ad5680b884a85ed4ca0e56d66d2fbaad, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2292,13 +2318,16 @@ PrefabInstance:
       addedObject: {fileID: 536712421}
     - targetCorrespondingSourceObject: {fileID: 7209453417612109477, guid: ad5680b884a85ed4ca0e56d66d2fbaad, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 536712427}
-    - targetCorrespondingSourceObject: {fileID: 7209453417612109477, guid: ad5680b884a85ed4ca0e56d66d2fbaad, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 536712434}
     - targetCorrespondingSourceObject: {fileID: 7209453417612109477, guid: ad5680b884a85ed4ca0e56d66d2fbaad, type: 3}
       insertIndex: -1
       addedObject: {fileID: 536712435}
+    - targetCorrespondingSourceObject: {fileID: 7209453417612109477, guid: ad5680b884a85ed4ca0e56d66d2fbaad, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 536712441}
+    - targetCorrespondingSourceObject: {fileID: 7209453417612109477, guid: ad5680b884a85ed4ca0e56d66d2fbaad, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 536712440}
   m_SourcePrefab: {fileID: 100100000, guid: ad5680b884a85ed4ca0e56d66d2fbaad, type: 3}
 --- !u!1001 &5991628439140645718
 PrefabInstance:

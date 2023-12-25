@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -121,7 +121,70 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: DAMAGE_L_SHOTGUN_PULLED_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 961
+        height: 1089
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dad96500038372645bb77cadb5d76058
+      internalID: -1079376245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DAMAGE_L_SHOTGUN_PULLED_1
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 0
+        width: 961
+        height: 1089
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a173aae20eb6f6e4087a6d85f889e10d
+      internalID: 801889677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DAMAGE_L_SHOTGUN_PULLED_2
+      rect:
+        serializedVersion: 2
+        x: 2047
+        y: 0
+        width: 962
+        height: 1089
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd5a80a4dc13732428fb8c4ae26fcfff
+      internalID: -920627686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +195,10 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      DAMAGE_L_SHOTGUN_PULLED_0: -1079376245
+      DAMAGE_L_SHOTGUN_PULLED_1: 801889677
+      DAMAGE_L_SHOTGUN_PULLED_2: -920627686
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

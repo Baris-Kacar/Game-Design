@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -121,7 +121,133 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: MOVEMENT_L_UNARMED_0
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 0
+        width: 804
+        height: 1090
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0286a5363b104c2408d4365ebbce2d11
+      internalID: 922450864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOVEMENT_L_UNARMED_1
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 0
+        width: 804
+        height: 1090
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bebb6f73b24ca5f419ef2e98a41948b3
+      internalID: -7439253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOVEMENT_L_UNARMED_2
+      rect:
+        serializedVersion: 2
+        x: 2205
+        y: 0
+        width: 804
+        height: 1090
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1b4c574ef8621141b78f6d3ecce0003
+      internalID: 1932598956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOVEMENT_L_UNARMED_3
+      rect:
+        serializedVersion: 2
+        x: 3231
+        y: 0
+        width: 804
+        height: 1090
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36d99484bfe33b344b0b53a97f9ca863
+      internalID: -97217169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOVEMENT_L_UNARMED_4
+      rect:
+        serializedVersion: 2
+        x: 4254
+        y: 0
+        width: 804
+        height: 1090
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e852a0c6cfce75d409ce7eb3d892aa57
+      internalID: -1267556825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOVEMENT_L_UNARMED_5
+      rect:
+        serializedVersion: 2
+        x: 5277
+        y: 0
+        width: 804
+        height: 1090
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e475fdaaf79ce254185027e6cc300718
+      internalID: -2117479768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +258,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      MOVEMENT_L_UNARMED_0: 922450864
+      MOVEMENT_L_UNARMED_1: -7439253
+      MOVEMENT_L_UNARMED_2: 1932598956
+      MOVEMENT_L_UNARMED_3: -97217169
+      MOVEMENT_L_UNARMED_4: -1267556825
+      MOVEMENT_L_UNARMED_5: -2117479768
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

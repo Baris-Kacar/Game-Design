@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -121,7 +121,91 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: PULL_L_SHOTGUN_0
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 0
+        width: 804
+        height: 1090
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 807846efcaff5b145a964dcad309fd33
+      internalID: -1120197728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PULL_L_SHOTGUN_1
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 0
+        width: 804
+        height: 1090
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be19beb8b4b71c44a8acecf971dec709
+      internalID: -1733014063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PULL_L_SHOTGUN_2
+      rect:
+        serializedVersion: 2
+        x: 2174
+        y: 0
+        width: 836
+        height: 1090
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3082bc87b9366f4db336bb6e24cbc6f
+      internalID: 313575999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PULL_L_SHOTGUN_3
+      rect:
+        serializedVersion: 2
+        x: 3070
+        y: 0
+        width: 964
+        height: 1090
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85e883f7afd49604f82ef8fc6d1c5db1
+      internalID: -1381319865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +216,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      PULL_L_SHOTGUN_0: -1120197728
+      PULL_L_SHOTGUN_1: -1733014063
+      PULL_L_SHOTGUN_2: 313575999
+      PULL_L_SHOTGUN_3: -1381319865
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

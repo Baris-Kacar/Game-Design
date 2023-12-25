@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -121,7 +121,133 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: MOVEMENT_L_ASSAULT_RIFLE_PULLED_0
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 0
+        width: 963
+        height: 1090
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c06bd22f46422a7478345ed797fa1675
+      internalID: -1080687510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOVEMENT_L_ASSAULT_RIFLE_PULLED_1
+      rect:
+        serializedVersion: 2
+        x: 1086
+        y: 0
+        width: 963
+        height: 1090
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baf2026031a6af44aaf319210c4dd153
+      internalID: 1004786094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOVEMENT_L_ASSAULT_RIFLE_PULLED_2
+      rect:
+        serializedVersion: 2
+        x: 2109
+        y: 0
+        width: 966
+        height: 1090
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b591dddd5b33efa48bf10fc24bc4eaaa
+      internalID: 1988189158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOVEMENT_L_ASSAULT_RIFLE_PULLED_3
+      rect:
+        serializedVersion: 2
+        x: 3135
+        y: 0
+        width: 963
+        height: 1090
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03619195d56125e4e920f723d8455846
+      internalID: -1634676890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOVEMENT_L_ASSAULT_RIFLE_PULLED_4
+      rect:
+        serializedVersion: 2
+        x: 4158
+        y: 0
+        width: 963
+        height: 1090
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1abbc5d062619ca45a0df2ea4504f795
+      internalID: 1754962550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOVEMENT_L_ASSAULT_RIFLE_PULLED_5
+      rect:
+        serializedVersion: 2
+        x: 5181
+        y: 0
+        width: 963
+        height: 1090
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc21a756ffa15ae4d89cf59eaa460b35
+      internalID: -1951856141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +258,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      MOVEMENT_L_ASSAULT_RIFLE_PULLED_0: -1080687510
+      MOVEMENT_L_ASSAULT_RIFLE_PULLED_1: 1004786094
+      MOVEMENT_L_ASSAULT_RIFLE_PULLED_2: 1988189158
+      MOVEMENT_L_ASSAULT_RIFLE_PULLED_3: -1634676890
+      MOVEMENT_L_ASSAULT_RIFLE_PULLED_4: 1754962550
+      MOVEMENT_L_ASSAULT_RIFLE_PULLED_5: -1951856141
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

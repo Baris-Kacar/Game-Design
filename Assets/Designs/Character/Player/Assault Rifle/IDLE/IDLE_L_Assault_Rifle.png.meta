@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -121,7 +121,133 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: IDLE_L_Assault_Rifle_0
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 0
+        width: 834
+        height: 1090
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c28338618fe2eca429f01ad9737028f7
+      internalID: -2026906855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IDLE_L_Assault_Rifle_1
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 0
+        width: 837
+        height: 1090
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b4eb8b5b41512149a0bc691463b6d8b
+      internalID: 1321077818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IDLE_L_Assault_Rifle_2
+      rect:
+        serializedVersion: 2
+        x: 2205
+        y: 0
+        width: 837
+        height: 1090
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16f8e9b0b7088cc469ea329abb8cc810
+      internalID: -2097344685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IDLE_L_Assault_Rifle_3
+      rect:
+        serializedVersion: 2
+        x: 3231
+        y: 0
+        width: 834
+        height: 1090
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a1c94266d005594f8a5ceee6e412d40
+      internalID: 936861019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IDLE_L_Assault_Rifle_4
+      rect:
+        serializedVersion: 2
+        x: 4254
+        y: 0
+        width: 837
+        height: 1090
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6c5305b4b7cc7a46805b83c45dade94
+      internalID: 1346205725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IDLE_L_Assault_Rifle_5
+      rect:
+        serializedVersion: 2
+        x: 5277
+        y: 0
+        width: 837
+        height: 1090
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5ec02845be16734997f990ffb527c77
+      internalID: 836094196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +258,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      IDLE_L_Assault_Rifle_0: -2026906855
+      IDLE_L_Assault_Rifle_1: 1321077818
+      IDLE_L_Assault_Rifle_2: -2097344685
+      IDLE_L_Assault_Rifle_3: 936861019
+      IDLE_L_Assault_Rifle_4: 1346205725
+      IDLE_L_Assault_Rifle_5: 836094196
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

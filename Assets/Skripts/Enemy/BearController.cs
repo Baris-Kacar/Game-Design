@@ -82,9 +82,9 @@ public class BearController : MonoBehaviour
 
     private void SetAnimationParameters(bool isMovingRight, bool isMovingLeft, bool isCloseEnoughToAttack)
     {
-        animator.SetBool("isMovingRight", isMovingRight);
-        animator.SetBool("isMovingLeft", isMovingLeft);
-        animator.SetBool("isCloseEnoughToAttack", isCloseEnoughToAttack);
+        //animator.SetBool("isMovingRight", isMovingRight);
+        //animator.SetBool("isMovingLeft", isMovingLeft);
+        //animator.SetBool("isCloseEnoughToAttack", isCloseEnoughToAttack);
        // Debug.Log(isMovingRight ? "Moving right" : isMovingLeft ? "Moving left" : "Not moving");
     }
 }

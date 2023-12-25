@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -121,7 +121,175 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: DEATH_R_SHOTGUN_0
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 637
+        width: 813
+        height: 1098
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dbf77f8b38d30b4e99c9d070d04b12a
+      internalID: 437968099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEATH_R_SHOTGUN_1
+      rect:
+        serializedVersion: 2
+        x: 1656
+        y: 637
+        width: 813
+        height: 1098
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c79a0fb35029b694cbd5dc54ebf0096d
+      internalID: 2000092875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEATH_R_SHOTGUN_2
+      rect:
+        serializedVersion: 2
+        x: 3256
+        y: 637
+        width: 813
+        height: 1098
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed6776b04866c6644bfe9514f0160feb
+      internalID: 1098801305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEATH_R_SHOTGUN_3
+      rect:
+        serializedVersion: 2
+        x: 4856
+        y: 637
+        width: 813
+        height: 1098
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d369e9ce746d4de458cfde7b0e897115
+      internalID: 306340999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEATH_R_SHOTGUN_4
+      rect:
+        serializedVersion: 2
+        x: 6494
+        y: 568
+        width: 775
+        height: 1167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b37092cf8e68a3949b6bb7753524fa2e
+      internalID: -1865475015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEATH_R_SHOTGUN_5
+      rect:
+        serializedVersion: 2
+        x: 8094
+        y: 537
+        width: 775
+        height: 1198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c466eb05796e47c4b92e4e264feec472
+      internalID: 1993514288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEATH_R_SHOTGUN_6
+      rect:
+        serializedVersion: 2
+        x: 9819
+        y: 537
+        width: 812
+        height: 1067
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9797cbbda4597ff42a271520e7e50c0d
+      internalID: -1463353101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DEATH_R_SHOTGUN_7
+      rect:
+        serializedVersion: 2
+        x: 11419
+        y: 537
+        width: 1194
+        height: 911
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be88490c4e5c2dd4795fa886c4ea6050
+      internalID: 1765760116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +300,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      DEATH_R_SHOTGUN_0: 437968099
+      DEATH_R_SHOTGUN_1: 2000092875
+      DEATH_R_SHOTGUN_2: 1098801305
+      DEATH_R_SHOTGUN_3: 306340999
+      DEATH_R_SHOTGUN_4: -1865475015
+      DEATH_R_SHOTGUN_5: 1993514288
+      DEATH_R_SHOTGUN_6: -1463353101
+      DEATH_R_SHOTGUN_7: 1765760116
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

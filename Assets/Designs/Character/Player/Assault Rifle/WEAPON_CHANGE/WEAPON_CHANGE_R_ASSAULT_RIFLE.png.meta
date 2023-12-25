@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -121,7 +121,91 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: WEAPON_CHANGE_R_ASSAULT_RIFLE_0
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 0
+        width: 964
+        height: 1090
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ef52ff10758584478c65fafceb41bbd
+      internalID: 559249860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_CHANGE_R_ASSAULT_RIFLE_1
+      rect:
+        serializedVersion: 2
+        x: 1086
+        y: 0
+        width: 836
+        height: 1090
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e38fec9449954294e9c5ee0105e9b2c6
+      internalID: -1583497004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_CHANGE_R_ASSAULT_RIFLE_2
+      rect:
+        serializedVersion: 2
+        x: 2110
+        y: 0
+        width: 804
+        height: 1090
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c798138f5182994aa13896a44aa6a1e
+      internalID: -1202256404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WEAPON_CHANGE_R_ASSAULT_RIFLE_3
+      rect:
+        serializedVersion: 2
+        x: 3134
+        y: 0
+        width: 804
+        height: 1090
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ad41920acbd94341bdd438a1fa22e2b
+      internalID: -2013139654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +216,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      WEAPON_CHANGE_R_ASSAULT_RIFLE_0: 559249860
+      WEAPON_CHANGE_R_ASSAULT_RIFLE_1: -1583497004
+      WEAPON_CHANGE_R_ASSAULT_RIFLE_2: -1202256404
+      WEAPON_CHANGE_R_ASSAULT_RIFLE_3: -2013139654
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

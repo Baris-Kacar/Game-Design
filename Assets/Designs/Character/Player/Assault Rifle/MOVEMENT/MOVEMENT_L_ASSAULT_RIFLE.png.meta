@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -121,7 +121,133 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: MOVEMENT_L_ASSAULT_RIFLE_0
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 0
+        width: 867
+        height: 1090
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 421667f1f92dfa44d844d6b4a9506d8a
+      internalID: -1163530432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOVEMENT_L_ASSAULT_RIFLE_1
+      rect:
+        serializedVersion: 2
+        x: 1149
+        y: 0
+        width: 837
+        height: 1090
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88e76aa4457d7784d8d56e504fdb9389
+      internalID: 342089081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOVEMENT_L_ASSAULT_RIFLE_2
+      rect:
+        serializedVersion: 2
+        x: 2046
+        y: 0
+        width: 963
+        height: 1090
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfa1c44b2781a1f4c9922af0208da84c
+      internalID: -477435149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOVEMENT_L_ASSAULT_RIFLE_3
+      rect:
+        serializedVersion: 2
+        x: 3198
+        y: 0
+        width: 837
+        height: 1090
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d77f9a93947b114b84e03e9eae69840
+      internalID: -161252391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOVEMENT_L_ASSAULT_RIFLE_4
+      rect:
+        serializedVersion: 2
+        x: 4254
+        y: 0
+        width: 837
+        height: 1090
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7034dc618b7389b469a0a3d0ee3e59fb
+      internalID: -2048098125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MOVEMENT_L_ASSAULT_RIFLE_5
+      rect:
+        serializedVersion: 2
+        x: 5277
+        y: 0
+        width: 867
+        height: 1090
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1f857085090f5447bc654db14f358fc
+      internalID: -1956631136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +258,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      MOVEMENT_L_ASSAULT_RIFLE_0: -1163530432
+      MOVEMENT_L_ASSAULT_RIFLE_1: 342089081
+      MOVEMENT_L_ASSAULT_RIFLE_2: -477435149
+      MOVEMENT_L_ASSAULT_RIFLE_3: -161252391
+      MOVEMENT_L_ASSAULT_RIFLE_4: -2048098125
+      MOVEMENT_L_ASSAULT_RIFLE_5: -1956631136
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
