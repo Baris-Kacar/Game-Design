@@ -29,6 +29,7 @@ public class CC : MonoBehaviour
         m_Rigidbody2D.velocity = new Vector2(m_Rigidbody2D.velocity.x, moveVertical * 10f);
     }
 
+
     private void Flip()
     {
         // Ändere die Art und Weise, wie der Spieler als Blickrichtung markiert ist.
