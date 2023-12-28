@@ -9,11 +9,14 @@ public class Pistol : MonoBehaviour, IWeapon {
     [SerializeField] private int remainingAmmo;           // Übrige Muniton (Lager)
     [SerializeField] private float fireRate = 0.8f;       // Schussrate pro Sekunde
     [SerializeField] private float nextFireTime = 0.2f;   // Zeit bis zum nächsten Schuss
+
+    private PM playerpm;
     private Animator animator;          // Für die Animationen
     public Transform firePoint;         // Punkt, an dem die Kugel abgefeuert wird
     public GameObject bulletPrefab;     // Prefab der Kugel
 
     void Start() {
+        playerpm = FindObjectOfType<PM>();
         // Weise der Variable animator einen Wert zu
         animator = GetComponent<Animator>();
         // Überprüfe, ob der Animator gefunden wurde
@@ -36,7 +39,8 @@ public class Pistol : MonoBehaviour, IWeapon {
         if (currentAmmo > 0) {
             if (bulletPrefab != null && firePoint != null) {
                 // Setzt den Trigger für die Animation
-                animator.SetTrigger("Shoot");
+                playerpm.Triggershoot();
+                //animator.SetTrigger("Shoot");
                 // Reduziere die Anzahl der Kugeln im Magazin
                 currentAmmo--;
                 // Erzeuge eine Kugel am Feuerpunkt
@@ -55,9 +59,9 @@ public class Pistol : MonoBehaviour, IWeapon {
 
     public void Reload() {
         // Überprüfe, ob das Magazin bereits voll ist
-        if (currentAmmo == magazineSize)
-        {
-            animator.SetTrigger("Reload");
+        if (currentAmmo == magazineSize) {
+            playerpm.Triggerreload();
+            //animator.SetTrigger("Reload");
             Debug.Log("Das Magazin ist bereits voll!");
             return;
         }
@@ -65,12 +69,14 @@ public class Pistol : MonoBehaviour, IWeapon {
         additionalAmmo = magazineSize - currentAmmo;
         // Überprüfe, ob der Spieler noch genügend zusätzliche Munition hat
         if (remainingAmmo > additionalAmmo) {
-            animator.SetTrigger("Reload");
+            playerpm.Triggerreload();
+            //animator.SetTrigger("Reload");
             // Der Spieler hat genug Munition, um das Magazin aufzufüllen
             currentAmmo = magazineSize;
             remainingAmmo -= additionalAmmo;
         } else {
-            animator.SetTrigger("Reload");
+            playerpm.Triggerreload();
+            //animator.SetTrigger("Reload");
             // Der Spieler hat nicht genug Munition, um das Magazin vollständig aufzufüllen
             currentAmmo += remainingAmmo;
             additionalAmmo = 0;

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PM : MonoBehaviour {
     public CC controller; // Referenz zum Charakter-Controller (CC)
+
     public float runSpeed = 20f; // Standard-Laufgeschwindigkeit
     public float dashSpeed = 80f; // Geschwindigkeit beim Sprinten (Dash)
 
@@ -93,14 +94,8 @@ public class PM : MonoBehaviour {
                 animator.SetInteger("Pull", 3);
             }
         }
-
         if (Input.GetKeyDown(KeyCode.R)) {
-            if (currentWeapon != null) {
-                currentWeapon.Reload();
-            } else {
-                Debug.Log("Nachladen nicht möglich.");
-            }
-
+            Reload();
         }
     }
 
@@ -155,11 +150,19 @@ public class PM : MonoBehaviour {
             currentWeapon.Shoot();
         }
     }
-    public void Reload()
-    {
-        if (currentWeapon != null)
-        {
-            currentWeapon.Shoot();
+    public void Reload() {
+        if (currentWeapon != null) {
+            //animator.SetTrigger("Reload");
+            currentWeapon.Reload();
+        } else {
+            Debug.Log("Nachladen nicht möglich.");
         }
+    }
+
+    public void Triggershoot() {
+        animator.SetTrigger("Shoot");
+    }
+    public void Triggerreload() {
+        animator.SetTrigger("Reload");
     }
 }
