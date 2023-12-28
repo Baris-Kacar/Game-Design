@@ -36,6 +36,7 @@ public class Enemy : MonoBehaviour
             
             Die();
             animator.SetTrigger("Death");
+            ScoreScript.scoreValue += 10;
         }
     }
 
