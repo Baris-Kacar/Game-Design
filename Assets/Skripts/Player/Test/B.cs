@@ -7,25 +7,24 @@ public class B : MonoBehaviour
     private int damage = 0; // Standard-Schaden
 
     // Start wird vor dem ersten Frame-Update aufgerufen
-    void Start()
-    {
+    void Start() {
         rb.velocity = transform.right * speed; // Setze die Anfangsgeschwindigkeit der Kugel
     }
 
     // Wird aufgerufen, wenn der Renderer für jede Kamera unsichtbar wird
-    void OnBecameInvisible()
-    {
+    void OnBecameInvisible() {
         // Zerstöre die Kugel, wenn sie unsichtbar wird
         Destroy(gameObject);
     }
 
-    // Setze den Schaden der Kugel
-    public void SetDamage(int newDamage)
-    {
+    public void InitializeBullet(int damage, float speed) {
+        this.damage = damage;
+        this.speed = speed;
+    }
+   /*
+    public void SetDamage(int newDamage) {
         damage = newDamage;
     }
-
-    // Setze die Geschwindigkeit der Kugel
     public void SetSpeed(float newSpeed)
     {
         speed = newSpeed;
@@ -34,15 +33,14 @@ public class B : MonoBehaviour
             rb.velocity = transform.right * speed;
         }
     }
+   */
 
-    // Wird aufgerufen, wenn die Kugel mit einem anderen Collider kollidiert
-    void OnTriggerEnter2D(Collider2D collision)
-    {
+    void OnTriggerEnter2D(Collider2D collision) {
         // Gehe davon aus, dass das Objekt eine Health-Komponente hat
-        Health health = collision.GetComponent<Health>();
-        if (health != null)
+        Enemy enemy = collision.GetComponent<Enemy>();
+        if (enemy != null)
         {
-            health.TakeDamage(damage);
+            enemy.TakeDamage(damage);
         }
         // Zerstöre die Kugel bei der Kollision
         Destroy(gameObject);
