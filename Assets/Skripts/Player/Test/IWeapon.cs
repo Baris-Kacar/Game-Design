@@ -1,6 +1,9 @@
+using UnityEngine;
+
 public interface IWeapon
 {
-    public void Shoot();
-    public void Reload();
+    
+    public void Shoot(Animator animator);
+    public void Reload(Animator animator);
 
 }

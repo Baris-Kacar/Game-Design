@@ -147,22 +147,15 @@ public class PM : MonoBehaviour {
 
     public void Shoot() {
         if(currentWeapon != null) {
-            currentWeapon.Shoot();
+            currentWeapon.Shoot(animator);
         }
     }
     public void Reload() {
         if (currentWeapon != null) {
-            //animator.SetTrigger("Reload");
-            currentWeapon.Reload();
+            currentWeapon.Reload(animator);
         } else {
+            Debug.Log(currentWeapon);
             Debug.Log("Nachladen nicht möglich.");
         }
-    }
-
-    public void Triggershoot() {
-        animator.SetTrigger("Shoot");
-    }
-    public void Triggerreload() {
-        animator.SetTrigger("Reload");
     }
 }
