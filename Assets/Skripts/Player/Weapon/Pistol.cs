@@ -1,33 +1,28 @@
-/*using UnityEngine;
+using UnityEngine;
 
-public class Shotgun : MonoBehaviour, IWeapon {
+public class Pistol : MonoBehaviour, IWeapon {
     [SerializeField] private float speed = 10f;           // geschwindigkeit der Kugel
-    [SerializeField] private int damage = 10;             // Schaden pro Schuss
-    [SerializeField] private static int magazineSize = 6;        // Größe des Magazins
-    private int currentAmmo = magazineSize;               // Momentanes Magazin
+    [SerializeField] private int damage = 25;             // Schaden pro Schuss
+    [SerializeField] private static int magazineSize = 12;// Größe des Magazins
+    public int currentAmmo = 12;               // Momentanes Magazin
     private int additionalAmmo;                           // Nachzuladene Kugeln
-    [SerializeField] private int remainingAmmo;           // Übrige Muniton
-    [SerializeField] private float fireRate = 1f;        // Schussrate pro Sekunde
-    [SerializeField] private int pelletsPerShot = 5;      // Anzahl der Schrotkugeln pro Schuss
-    private float nextFireTime = 0f;   // Zeit bis zum nächsten Schuss
-   
-    //public Transform firePoint;         // Punkt, an dem die Kugel abgefeuert wird
-    //public GameObject bulletPrefab;     // Prefab der Kugel
+    [SerializeField] private int remainingAmmo;           // Übrige Muniton (Lager)
+    [SerializeField] private float fireRate = 0.8f;       // Schussrate pro Sekunde
+    [SerializeField] private float nextFireTime = 0.2f;   // Zeit bis zum nächsten Schuss
 
     void Update() {
         // Wenn der Spieler schießt und die Schussrate eingehalten wird
-        if (Input.GetButtonDown("Fire1") && Time.time > nextFireTime)
-        {
+        if (Input.GetButtonDown("Fire1") && Time.time > nextFireTime) {
             nextFireTime = Time.time + 1f / fireRate; // Setze die nächste mögliche Schusszeit
         }
-        // Unendlich Muniton
         remainingAmmo = magazineSize;
     }
 
-    public void Shoot(Animator animator, firePoint, bulletPrefab) {
+    public void Shoot(Animator animator, Transform firePoint, GameObject bulletPrefab) {
         // Überprüfe, ob noch Kugeln im Magazin sind
         if (currentAmmo > 0) {
             if (bulletPrefab != null && firePoint != null) {
+                Debug.Log("Prefab and firepoint");
                 // Setzt den Trigger für die Animation
                 animator.SetTrigger("Shoot");
                 // Reduziere die Anzahl der Kugeln im Magazin
@@ -35,7 +30,7 @@ public class Shotgun : MonoBehaviour, IWeapon {
                 // Erzeuge eine Kugel am Feuerpunkt
                 GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
                 // Greife auf das Bullet-Skript zu und setze den Schaden
-                B bulletScript = bullet.GetComponent<B>();
+                Bullet bulletScript = bullet.GetComponent<Bullet>();
                 if (bulletScript != null) {
                     bulletScript.InitializeBullet(damage, speed);
                 }
@@ -69,6 +64,11 @@ public class Shotgun : MonoBehaviour, IWeapon {
         Debug.Log("Magazin nachgeladen!");
     }
 
+    //magazineSize  Größe des Magazins
+    //currentAmmo Momentanes Magazin
+    //additionalAmmo Nachzuladene Kugeln
+    //remainingAmmo Übrige Muniton (Lager)
+
     public void SetDamage(int newDamage) {
         damage = newDamage;
     }
@@ -78,5 +78,5 @@ public class Shotgun : MonoBehaviour, IWeapon {
     public void SetFireRate(int newFireRate) {
         fireRate = newFireRate;
     }
+   
 }
-*/

@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PM : MonoBehaviour {
-    public CC controller; // Referenz zum Charakter-Controller (CC)
+public class PlayerMovement: MonoBehaviour {
+    public Character_Controller controller; // Referenz zum Charakter-Controller (CC)
 
     public float runSpeed = 20f; // Standard-Laufgeschwindigkeit
     public float dashSpeed = 80f; // Geschwindigkeit beim Sprinten (Dash)
@@ -14,11 +14,11 @@ public class PM : MonoBehaviour {
 
     private Pistol pistol; // Referenz zum Pistol-Skript
 
-    //private Shotgun shotgun; // Referenz zum Shotgun-Skript
+    private Shotgun shotgun; // Referenz zum Shotgun-Skript
     private bool shotgunUnlocked = false; // Zeigt an, ob die Schrotflinte freigeschaltet ist
     private int requiredPointsForShotgun = 100; // Beispiel: Der Spieler benötigt 100 Punkte, um die Schrotflinte freizuschalten
 
-    //private AssaultRifle assualtrifle; // Referenz zum AssaultRifle-Skript
+    private AssaultRifle assualtrifle; // Referenz zum AssaultRifle-Skript
     private bool assualtrifleUnlocked = false; // Zeigt an, ob die AssaultRifle freigeschaltet ist
     private int requiredPointsForAssualtRifle = 200; // Beispiel: Der Spieler benötigt 200 Punkte, um die AssaultRifle freizuschalten
 
@@ -50,14 +50,12 @@ public class PM : MonoBehaviour {
         // Setze die aktuelle Waffe beim Start
         SetCurrentWeapon();
     }
-
     void InitializeWeapons() {
         weapons = new List<IWeapon>();
         weapons.Add(new Pistol());
-        //weapons.Add(new Shotgun());
-        //weapons.Add(new AssaultRifle());
+        weapons.Add(new Shotgun());
+        weapons.Add(new AssaultRifle());
     }
-
     void Update() {
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed; // Horizontale Bewegung basierend auf der Eingabe
         verticalMove = Input.GetAxisRaw("Vertical") * runSpeed; // Vertikale Bewegung basierend auf der Eingabe
@@ -101,13 +99,11 @@ public class PM : MonoBehaviour {
             Reload();
         }
     }
-
     void FixedUpdate() {
         // Bewege unseren Charakter
         controller.Move(horizontalMove * Time.fixedDeltaTime, verticalMove * Time.fixedDeltaTime);
 
     }
-
     void Dash() {
         isDashing = true;
         // Speichere die ursprüngliche Laufgeschwindigkeit
@@ -122,7 +118,6 @@ public class PM : MonoBehaviour {
         // Setze die Laufgeschwindigkeit nach dem Sprint zurück
         StartCoroutine(ResetDash(originalRunSpeed));
     }
-
     IEnumerator ResetDash(float originalRunSpeed) {
         yield return new WaitForSeconds(0.5f); // Pausiere für die Dauer des Sprints (Anpassung nach Bedarf)
 
@@ -131,7 +126,6 @@ public class PM : MonoBehaviour {
         // Deaktiviere den Trail
         trailrenderer.emitting = false;
     }
-
     void SwitchWeapon(int index) {
         // Deaktiviert die aktuelle Waffe
         currentWeaponIndex = index;
@@ -147,7 +141,6 @@ public class PM : MonoBehaviour {
         // Setzt die Referenz zur aktuellen Waffe
         currentWeapon = weapons[currentWeaponIndex];
     }
-
     public void Shoot() {
         if(currentWeapon != null) {
             currentWeapon.Shoot(animator, firePoint, bulletPrefab);

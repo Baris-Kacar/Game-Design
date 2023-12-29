@@ -1,9 +1,9 @@
 using UnityEngine;
 
-public class B : MonoBehaviour
+public class Bullet : MonoBehaviour
 {
     public Rigidbody2D rb;
-    public float speed = 0; // Geschwindigkeit der Kugel
+    private float speed = 0; // Geschwindigkeit der Kugel
     private int damage = 0; // Standard-Schaden
 
     // Start wird vor dem ersten Frame-Update aufgerufen
@@ -21,19 +21,6 @@ public class B : MonoBehaviour
         this.damage = damage;
         this.speed = speed;
     }
-   /*
-    public void SetDamage(int newDamage) {
-        damage = newDamage;
-    }
-    public void SetSpeed(float newSpeed)
-    {
-        speed = newSpeed;
-        if (rb != null)
-        {
-            rb.velocity = transform.right * speed;
-        }
-    }
-   */
 
     void OnTriggerEnter2D(Collider2D collision) {
         // Gehe davon aus, dass das Objekt eine Health-Komponente hat

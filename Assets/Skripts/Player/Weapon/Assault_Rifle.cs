@@ -1,7 +1,6 @@
-/*using UnityEngine;
+using UnityEngine;
 
-public class AssaultRifle : MonoBehaviour, IWeapon
-{
+public class AssaultRifle : MonoBehaviour, IWeapon {
     [SerializeField] private float speed = 10f;           // geschwindigkeit der Kugel
     [SerializeField] private int damage = 50;             // Schaden pro Schuss
     [SerializeField] private static int magazineSize = 30;       // Größe des Magazins
@@ -10,9 +9,6 @@ public class AssaultRifle : MonoBehaviour, IWeapon
     [SerializeField] private int remainingAmmo;           // Übrige Muniton
     [SerializeField] private float fireRate = 10f;        // Schussrate pro Sekunde
     [SerializeField] private float nextFireTime = 0.0f;   // Zeit bis zum nächsten Schuss
-    
-    //public Transform firePoint;         // Punkt, an dem die Kugel abgefeuert wird
-    //public GameObject bulletPrefab;     // Prefab der Kugel
 
     void Update() {
         // Wenn der Spieler schießt und die Schussrate eingehalten wird
@@ -21,10 +17,11 @@ public class AssaultRifle : MonoBehaviour, IWeapon
         }
     }
 
-    public void Shoot(Animator animator, Transform firePoint, Gameobject bulletPrefab) {
+    public void Shoot(Animator animator, Transform firePoint, GameObject bulletPrefab) {
         // Überprüfe, ob noch Kugeln im Magazin sind
         if (currentAmmo > 0) {
             if (bulletPrefab != null && firePoint != null) {
+                Debug.Log("Prefab and firepoint");
                 // Setzt den Trigger für die Animation
                 animator.SetTrigger("Shoot");
                 // Reduziere die Anzahl der Kugeln im Magazin
@@ -32,7 +29,7 @@ public class AssaultRifle : MonoBehaviour, IWeapon
                 // Erzeuge eine Kugel am Feuerpunkt
                 GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
                 // Greife auf das Bullet-Skript zu und setze den Schaden
-                B bulletScript = bullet.GetComponent<B>();
+                Bullet bulletScript = bullet.GetComponent<Bullet>();
                 if (bulletScript != null) {
                     bulletScript.InitializeBullet(damage, speed);
                 }
@@ -76,4 +73,3 @@ public class AssaultRifle : MonoBehaviour, IWeapon
         fireRate = newFireRate;
     }
 }
-*/

@@ -1,17 +1,16 @@
 using UnityEngine;
 
-public class Pistol : MonoBehaviour, IWeapon {
+public class Shotgun : MonoBehaviour, IWeapon {
     [SerializeField] private float speed = 10f;           // geschwindigkeit der Kugel
-    [SerializeField] private int damage = 25;             // Schaden pro Schuss
-    [SerializeField] private static int magazineSize = 12;// Größe des Magazins
-    public int currentAmmo = magazineSize;               // Momentanes Magazin
+    [SerializeField] private static int damagePerPellet = 10;    // Schaden pro Pellet
+    [SerializeField] private static int pelletsPerShot = 12;      // Anzahl der Schrotkugeln pro Schuss
+    [SerializeField] private int damage = damagePerPellet * pelletsPerShot;             // Schaden pro Schuss
+    [SerializeField] private static int magazineSize = 6;        // Größe des Magazins
+    private int currentAmmo = magazineSize;               // Momentanes Magazin
     private int additionalAmmo;                           // Nachzuladene Kugeln
-    [SerializeField] private int remainingAmmo;           // Übrige Muniton (Lager)
-    [SerializeField] private float fireRate = 0.8f;       // Schussrate pro Sekunde
-    [SerializeField] private float nextFireTime = 0.2f;   // Zeit bis zum nächsten Schuss
-
-    //public Transform firePoint;         // Punkt, an dem die Kugel abgefeuert wird
-    //public GameObject bulletPrefab;     // Prefab der Kugel
+    [SerializeField] private int remainingAmmo;           // Übrige Muniton
+    [SerializeField] private float fireRate = 1f;        // Schussrate pro Sekunde
+    private float nextFireTime = 0f;   // Zeit bis zum nächsten Schuss
 
     void Update() {
         // Wenn der Spieler schießt und die Schussrate eingehalten wird
@@ -32,7 +31,7 @@ public class Pistol : MonoBehaviour, IWeapon {
                 // Erzeuge eine Kugel am Feuerpunkt
                 GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
                 // Greife auf das Bullet-Skript zu und setze den Schaden
-                B bulletScript = bullet.GetComponent<B>();
+                Bullet bulletScript = bullet.GetComponent<Bullet>();
                 if (bulletScript != null) {
                     bulletScript.InitializeBullet(damage, speed);
                 }
@@ -65,7 +64,7 @@ public class Pistol : MonoBehaviour, IWeapon {
         }
         Debug.Log("Magazin nachgeladen!");
     }
-    
+
     public void SetDamage(int newDamage) {
         damage = newDamage;
     }
@@ -75,5 +74,4 @@ public class Pistol : MonoBehaviour, IWeapon {
     public void SetFireRate(int newFireRate) {
         fireRate = newFireRate;
     }
-   
 }

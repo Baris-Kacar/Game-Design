@@ -1,19 +1,16 @@
 using UnityEngine;
 
-public class CC : MonoBehaviour
-{
+public class Character_Controller : MonoBehaviour {
     [Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f; // Glatte Bewegung des Charakters
     [SerializeField] private Rigidbody2D m_Rigidbody2D;
     private Vector3 velocity = Vector3.zero; // Geschwindigkeitsvektor für die Bewegung
     private bool m_FacingRight = true; // Hinzugefügte fehlende Variable für die Blickrichtung des Charakters
 
-    private void Awake()
-    {
+    private void Awake() {
         m_Rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
-    public void Move(float moveHorizontal, float moveVertical)
-    {
+    public void Move(float moveHorizontal, float moveVertical) {
         // Setze die Zielgeschwindigkeit für die horizontale Bewegung
         Vector3 targetVelocity = new Vector2(moveHorizontal * 10f, m_Rigidbody2D.velocity.y);
         // Wende die glatte Bewegung an
@@ -30,8 +27,7 @@ public class CC : MonoBehaviour
     }
 
 
-    private void Flip()
-    {
+    private void Flip() {
         // Ändere die Art und Weise, wie der Spieler als Blickrichtung markiert ist.
         m_FacingRight = !m_FacingRight;
 
