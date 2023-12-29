@@ -10,22 +10,21 @@ public class Pistol : MonoBehaviour, IWeapon {
     [SerializeField] private float fireRate = 0.8f;       // Schussrate pro Sekunde
     [SerializeField] private float nextFireTime = 0.2f;   // Zeit bis zum nächsten Schuss
 
-    public Transform firePoint;         // Punkt, an dem die Kugel abgefeuert wird
-    public GameObject bulletPrefab;     // Prefab der Kugel
+    //public Transform firePoint;         // Punkt, an dem die Kugel abgefeuert wird
+    //public GameObject bulletPrefab;     // Prefab der Kugel
 
     void Update() {
         // Wenn der Spieler schießt und die Schussrate eingehalten wird
         if (Input.GetButtonDown("Fire1") && Time.time > nextFireTime) {
             nextFireTime = Time.time + 1f / fireRate; // Setze die nächste mögliche Schusszeit
         }
-        // Unendlich Muniton
-        remainingAmmo = magazineSize;
     }
 
-    public void Shoot(Animator animator) {
+    public void Shoot(Animator animator, Transform firePoint, GameObject bulletPrefab) {
         // Überprüfe, ob noch Kugeln im Magazin sind
         if (currentAmmo > 0) {
             if (bulletPrefab != null && firePoint != null) {
+                Debug.Log("Prefab and firepoint");
                 // Setzt den Trigger für die Animation
                 animator.SetTrigger("Shoot");
                 // Reduziere die Anzahl der Kugeln im Magazin

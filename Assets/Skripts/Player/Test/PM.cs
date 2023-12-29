@@ -14,11 +14,11 @@ public class PM : MonoBehaviour {
 
     private Pistol pistol; // Referenz zum Pistol-Skript
 
-    private Shotgun shotgun; // Referenz zum Shotgun-Skript
+    //private Shotgun shotgun; // Referenz zum Shotgun-Skript
     private bool shotgunUnlocked = false; // Zeigt an, ob die Schrotflinte freigeschaltet ist
     private int requiredPointsForShotgun = 100; // Beispiel: Der Spieler benötigt 100 Punkte, um die Schrotflinte freizuschalten
 
-    private AssaultRifle assualtrifle; // Referenz zum AssaultRifle-Skript
+    //private AssaultRifle assualtrifle; // Referenz zum AssaultRifle-Skript
     private bool assualtrifleUnlocked = false; // Zeigt an, ob die AssaultRifle freigeschaltet ist
     private int requiredPointsForAssualtRifle = 200; // Beispiel: Der Spieler benötigt 200 Punkte, um die AssaultRifle freizuschalten
 
@@ -28,6 +28,9 @@ public class PM : MonoBehaviour {
 
     float horizontalMove = 0f; // Horizontale Bewegung
     float verticalMove = 0f; // Vertikale Bewegung
+
+    public Transform firePoint;         // Punkt, an dem die Kugel abgefeuert wird
+    public GameObject bulletPrefab;     // Prefab der Kugel
 
     void Start() {
         // Weise der Variable animator einen Wert zu
@@ -51,8 +54,8 @@ public class PM : MonoBehaviour {
     void InitializeWeapons() {
         weapons = new List<IWeapon>();
         weapons.Add(new Pistol());
-        weapons.Add(new Shotgun());
-        weapons.Add(new AssaultRifle());
+        //weapons.Add(new Shotgun());
+        //weapons.Add(new AssaultRifle());
     }
 
     void Update() {
@@ -147,7 +150,7 @@ public class PM : MonoBehaviour {
 
     public void Shoot() {
         if(currentWeapon != null) {
-            currentWeapon.Shoot(animator);
+            currentWeapon.Shoot(animator, firePoint, bulletPrefab);
         }
     }
     public void Reload() {

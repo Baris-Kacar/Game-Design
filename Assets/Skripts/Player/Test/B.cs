@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class B : MonoBehaviour
 {
-    public float speed = 20f; // Geschwindigkeit der Kugel
     public Rigidbody2D rb;
+    public float speed = 0; // Geschwindigkeit der Kugel
     private int damage = 0; // Standard-Schaden
 
     // Start wird vor dem ersten Frame-Update aufgerufen

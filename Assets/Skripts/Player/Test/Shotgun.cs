@@ -1,4 +1,4 @@
-using UnityEngine;
+/*using UnityEngine;
 
 public class Shotgun : MonoBehaviour, IWeapon {
     [SerializeField] private float speed = 10f;           // geschwindigkeit der Kugel
@@ -11,8 +11,8 @@ public class Shotgun : MonoBehaviour, IWeapon {
     [SerializeField] private int pelletsPerShot = 5;      // Anzahl der Schrotkugeln pro Schuss
     private float nextFireTime = 0f;   // Zeit bis zum nächsten Schuss
    
-    public Transform firePoint;         // Punkt, an dem die Kugel abgefeuert wird
-    public GameObject bulletPrefab;     // Prefab der Kugel
+    //public Transform firePoint;         // Punkt, an dem die Kugel abgefeuert wird
+    //public GameObject bulletPrefab;     // Prefab der Kugel
 
     void Update() {
         // Wenn der Spieler schießt und die Schussrate eingehalten wird
@@ -24,7 +24,7 @@ public class Shotgun : MonoBehaviour, IWeapon {
         remainingAmmo = magazineSize;
     }
 
-    public void Shoot(Animator animator) {
+    public void Shoot(Animator animator, firePoint, bulletPrefab) {
         // Überprüfe, ob noch Kugeln im Magazin sind
         if (currentAmmo > 0) {
             if (bulletPrefab != null && firePoint != null) {
@@ -79,3 +79,4 @@ public class Shotgun : MonoBehaviour, IWeapon {
         fireRate = newFireRate;
     }
 }
+*/

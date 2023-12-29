@@ -1,4 +1,4 @@
-using UnityEngine;
+/*using UnityEngine;
 
 public class AssaultRifle : MonoBehaviour, IWeapon
 {
@@ -10,9 +10,9 @@ public class AssaultRifle : MonoBehaviour, IWeapon
     [SerializeField] private int remainingAmmo;           // Übrige Muniton
     [SerializeField] private float fireRate = 10f;        // Schussrate pro Sekunde
     [SerializeField] private float nextFireTime = 0.0f;   // Zeit bis zum nächsten Schuss
-    private Animator animator;          // Für die Animationen
-    public Transform firePoint;         // Punkt, an dem die Kugel abgefeuert wird
-    public GameObject bulletPrefab;     // Prefab der Kugel
+    
+    //public Transform firePoint;         // Punkt, an dem die Kugel abgefeuert wird
+    //public GameObject bulletPrefab;     // Prefab der Kugel
 
     void Update() {
         // Wenn der Spieler schießt und die Schussrate eingehalten wird
@@ -21,7 +21,7 @@ public class AssaultRifle : MonoBehaviour, IWeapon
         }
     }
 
-    public void Shoot(Animator animator) {
+    public void Shoot(Animator animator, Transform firePoint, Gameobject bulletPrefab) {
         // Überprüfe, ob noch Kugeln im Magazin sind
         if (currentAmmo > 0) {
             if (bulletPrefab != null && firePoint != null) {
@@ -76,3 +76,4 @@ public class AssaultRifle : MonoBehaviour, IWeapon
         fireRate = newFireRate;
     }
 }
+*/
