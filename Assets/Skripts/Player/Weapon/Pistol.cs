@@ -6,7 +6,7 @@ public class Pistol : MonoBehaviour, IWeapon {
     [SerializeField] private static int magazineSize = 12;// Größe des Magazins
     public int currentAmmo = 12;               // Momentanes Magazin
     private int additionalAmmo;                           // Nachzuladene Kugeln
-    [SerializeField] private int remainingAmmo;           // Übrige Muniton (Lager)
+    [SerializeField] private int remainingAmmo = magazineSize;           // Übrige Muniton (Lager)
     [SerializeField] private float fireRate = 0.8f;       // Schussrate pro Sekunde
     [SerializeField] private float nextFireTime = 0.2f;   // Zeit bis zum nächsten Schuss
 
@@ -15,7 +15,6 @@ public class Pistol : MonoBehaviour, IWeapon {
         if (Input.GetButtonDown("Fire1") && Time.time > nextFireTime) {
             nextFireTime = Time.time + 1f / fireRate; // Setze die nächste mögliche Schusszeit
         }
-        remainingAmmo = magazineSize;
     }
 
     public void Shoot(Animator animator, Transform firePoint, GameObject bulletPrefab) {
@@ -49,25 +48,33 @@ public class Pistol : MonoBehaviour, IWeapon {
         }
         // Berechne die Anzahl der Patronen, die nachgeladen werden können
         additionalAmmo = magazineSize - currentAmmo;
+        // Debug-Ausgabe für Überprüfung
+        Debug.Log("Remaining Ammo: " + remainingAmmo);
+        Debug.Log("Additional Ammo: " + additionalAmmo);
         // Überprüfe, ob der Spieler noch genügend zusätzliche Munition hat
-        if (remainingAmmo > additionalAmmo) {
+        if (remainingAmmo >= additionalAmmo) {
             animator.SetTrigger("Reload");
             // Der Spieler hat genug Munition, um das Magazin aufzufüllen
             currentAmmo = magazineSize;
             remainingAmmo -= additionalAmmo;
+            Debug.Log("Magazin aufgefüllt!");
         } else {
             animator.SetTrigger("Reload");
             // Der Spieler hat nicht genug Munition, um das Magazin vollständig aufzufüllen
             currentAmmo += remainingAmmo;
-            additionalAmmo = 0;
+            remainingAmmo = 0;
+            Debug.Log("Magazin teilweise aufgefüllt!");
         }
+        remainingAmmo = magazineSize; //Unendlich Muniton
+        // Debug-Ausgabe am Ende der Reload-Funktion
+        Debug.Log("Nachladen abgeschlossen. Current Ammo: " + currentAmmo + " Remaining Ammo: " + remainingAmmo);
         Debug.Log("Magazin nachgeladen!");
     }
 
-    //magazineSize  Größe des Magazins
+    //magazineSize Größe des Magazins
     //currentAmmo Momentanes Magazin
     //additionalAmmo Nachzuladene Kugeln
-    //remainingAmmo Übrige Muniton (Lager)
+    //remainingAmmo Übrige Muniton
 
     public void SetDamage(int newDamage) {
         damage = newDamage;

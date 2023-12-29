@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Audio
   - StreetCollider
+  - Bear
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -13,7 +15,7 @@ TagManager:
   - Street
   - Water
   - UI
-  - 
+  - Dynamisch
   - 
   - 
   - 

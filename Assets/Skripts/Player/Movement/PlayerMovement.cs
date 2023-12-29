@@ -110,7 +110,8 @@ public class PlayerMovement: MonoBehaviour {
         float originalRunSpeed = runSpeed;
         // Erhöhe die Laufgeschwindigkeit für den Sprint
         runSpeed = dashSpeed;
-
+        // Deaktiviere die Kollision mit dem EnemyLayer während des Dashes
+        Physics2D.IgnoreLayerCollision(gameObject.layer, gameObject.layer, true);
         // Trail aktivieren
         trailrenderer.emitting = true;
         // Setze die Lebensdauer des Trails
@@ -119,12 +120,16 @@ public class PlayerMovement: MonoBehaviour {
         StartCoroutine(ResetDash(originalRunSpeed));
     }
     IEnumerator ResetDash(float originalRunSpeed) {
-        yield return new WaitForSeconds(0.5f); // Pausiere für die Dauer des Sprints (Anpassung nach Bedarf)
+        yield return new WaitForSeconds(0.2f); // Pausiere für die Dauer des Sprints (Anpassung nach Bedarf)
 
         runSpeed = originalRunSpeed;
-        isDashing = false;
         // Deaktiviere den Trail
         trailrenderer.emitting = false;
+        // Aktiviert die Kollision mit dem EnemyLayer während des Dashes
+        Physics2D.IgnoreLayerCollision(gameObject.layer, gameObject.layer, false);
+        // Wartezeit, bevor die Kollision mit dem EnemyLayer wieder aktiviert wird
+        yield return new WaitForSeconds(1f);
+        isDashing = false;
     }
     void SwitchWeapon(int index) {
         // Deaktiviert die aktuelle Waffe
