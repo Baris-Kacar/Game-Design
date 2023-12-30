@@ -602,6 +602,7 @@ MonoBehaviour:
   currentHealth: 0
   healthbar: {fileID: 798183687}
   gameManager: {fileID: 71727469}
+  playerMovement: {fileID: 0}
 --- !u!61 &536712434
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3474,7 +3475,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3308750352576842300, guid: ad5680b884a85ed4ca0e56d66d2fbaad, type: 3}
       propertyPath: m_SortingOrder
-      value: 2
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4018944114623219645, guid: ad5680b884a85ed4ca0e56d66d2fbaad, type: 3}
+      propertyPath: m_Constraints
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7209453417612109477, guid: ad5680b884a85ed4ca0e56d66d2fbaad, type: 3}
       propertyPath: m_Name

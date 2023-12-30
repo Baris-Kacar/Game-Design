@@ -78,7 +78,7 @@ public class PlayerMovement: MonoBehaviour {
             animator.SetInteger("Pull", 1);
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2)) {
-            if (shotgunUnlocked) {
+            if (!shotgunUnlocked) {
                 Debug.Log("Noch nicht freigeschaltet.");
             } else {
                 animator.SetTrigger("Weapon_Change");
@@ -87,7 +87,7 @@ public class PlayerMovement: MonoBehaviour {
             }
         }
         else if (Input.GetKeyDown(KeyCode.Alpha3)) {
-            if (assualtrifleUnlocked) {
+            if (!assualtrifleUnlocked) {
                 Debug.Log("Noch nicht freigeschaltet.");
             } else {
                 animator.SetTrigger("Weapon_Change");

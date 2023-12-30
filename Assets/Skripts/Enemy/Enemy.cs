@@ -10,9 +10,12 @@ public class Enemy : MonoBehaviour
     public GameObject deathEffect;
     private Animator animator;
 
-    public void Start()
-    {
+    public void Start() {
         animator = GetComponent<Animator>();
+        if (animator == null)
+        {
+            Debug.LogError("Animator not found! Make sure the Animator component is attached to the GameObject.");
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -21,8 +24,7 @@ public class Enemy : MonoBehaviour
         {
             Health playerHealth = other.GetComponent<Health>();
 
-            if (playerHealth != null)
-            {
+            if (playerHealth != null) {
                 playerHealth.TakeDamage(damage);
             }
         }
@@ -31,8 +33,7 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
-        if (health <= 0)
-        {
+        if (health <= 0) {
             
             Die();
             animator.SetTrigger("Death");
