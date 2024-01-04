@@ -28,7 +28,7 @@ public class Health : MonoBehaviour
         playerMovement = GetComponent<PlayerMovement>(); 
         // Aktiviere den Collider2D des Spielers
         gameObject.GetComponent<Collider2D>().enabled = true; 
-        // Aktiviere den Rigidbody2D des Spielers oder füge ihn hinzu, wenn er nicht vorhanden ist
+        // Aktiviere den Rigidbody2D des Spielers oder fï¿½ge ihn hinzu, wenn er nicht vorhanden ist
         Rigidbody2D rb = gameObject.GetComponent<Rigidbody2D>();
         if (rb == null) {
             rb = gameObject.AddComponent<Rigidbody2D>();
@@ -36,11 +36,11 @@ public class Health : MonoBehaviour
         rb.constraints = RigidbodyConstraints2D.None; 
         // Sperre die Rotation um die Z-Achse
         rb.freezeRotation = true; 
-        // Aktiviere alle anderen Skripte, die die Bewegung beeinflussen könnten
+        // Aktiviere alle anderen Skripte, die die Bewegung beeinflussen kï¿½nnten
         if (playerMovement != null) {
             playerMovement.enabled = true;
         }
-        // Setze die Zeit zurück, falls sie pausiert wurde
+        // Setze die Zeit zurï¿½ck, falls sie pausiert wurde
         Time.timeScale = 1f;
     }
 
@@ -54,7 +54,7 @@ public class Health : MonoBehaviour
             gameObject.GetComponent<Collider2D>().enabled = false;
              // Entferne oder deaktiviere den Rigidbody2D, um weitere physikalische Interaktionen zu verhindern
             Destroy(GetComponent<Rigidbody2D>());
-            // Deaktiviere alle anderen Skripte, die die Bewegung beeinflussen könnten
+            // Deaktiviere alle anderen Skripte, die die Bewegung beeinflussen kï¿½nnten
             if (playerMovement != null) {
                 playerMovement.enabled = false;
             } 
@@ -73,6 +73,18 @@ public class Health : MonoBehaviour
             TakeDamage(20); 
             // Hier frieren wir die Position des Spielers ein, um Kollisionen mit den Gegnern zu verhindern
             FreezePlayerPosition();
+        }
+
+        if (collision.gameObject.CompareTag("Hitbox"))
+        {
+            TakeDamage(20);
+            Rigidbody2D rb = GetComponent<Rigidbody2D>();
+            if (rb != null)
+            {
+                Vector2 pushDirection = new Vector2(20f, 0f); // Adjust the direction as needed
+                float pushForce = 2f; // Adjust the force as needed
+                rb.AddForce(pushDirection * pushForce, ForceMode2D.Impulse);
+            }
         }
     }
 

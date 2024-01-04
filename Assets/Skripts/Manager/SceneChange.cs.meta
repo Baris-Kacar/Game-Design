@@ -1,11 +1,9 @@
 fileFormatVersion: 2
-guid: 11938552ad148ab40b679ca4724e7048
+guid: 14fc7d4cd04c9d04ca46487710d207f8
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - audiomanager: {instanceID: 0}
-  - gunshotSound: {fileID: 8300000, guid: a0aafd0daed709c4c95654de780a88a6, type: 3}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
