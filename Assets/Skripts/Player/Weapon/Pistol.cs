@@ -1,28 +1,65 @@
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
 public class Pistol : MonoBehaviour, IWeapon {
     [SerializeField] private float speed = 10f;           // geschwindigkeit der Kugel
     [SerializeField] private int damage = 25;             // Schaden pro Schuss
-    [SerializeField] private static int magazineSize = 12;// Größe des Magazins
+    [SerializeField] private static int magazineSize = 12;// Grï¿½ï¿½e des Magazins
     public int currentAmmo = 12;               // Momentanes Magazin
     private int additionalAmmo;                           // Nachzuladene Kugeln
-    [SerializeField] private int remainingAmmo = magazineSize;           // Übrige Muniton (Lager)
+    [SerializeField] private int remainingAmmo = magazineSize;           // ï¿½brige Muniton (Lager)
     [SerializeField] private float fireRate = 0.8f;       // Schussrate pro Sekunde
-    [SerializeField] private float nextFireTime = 0.2f;   // Zeit bis zum nächsten Schuss
+    [SerializeField] private float nextFireTime = 0.2f;   // Zeit bis zum nï¿½chsten Schuss
+    [SerializeField] private AudioManager audiomanager;
+    [SerializeField] private AudioClip gunshotSound;
+    [SerializeField] private AudioClip reloadSound;
+    [SerializeField] private TextMeshProUGUI ammoText;
+    
 
-    void Update() {
-        // Wenn der Spieler schießt und die Schussrate eingehalten wird
-        if (Input.GetButtonDown("Fire1") && Time.time > nextFireTime) {
-            nextFireTime = Time.time + 1f / fireRate; // Setze die nächste mögliche Schusszeit
+    
+    void Start()
+    {
+        if (ammoText == null)
+        {
+            Debug.LogError("Ammo Text not assigned in the insepctor");
+        }
+        else
+        {
+            UpdateAmmoText();
         }
     }
 
+    void Update() {
+        // Wenn der Spieler schieï¿½t und die Schussrate eingehalten wird
+        if (Input.GetButtonDown("Fire1") && Time.time > nextFireTime) {
+            nextFireTime = Time.time + 1f / fireRate; // Setze die nï¿½chste mï¿½gliche Schusszeit
+        }
+        Debug.Log(currentAmmo);
+        if (Input.GetButtonDown("Fire1") && currentAmmo > 0)
+        {
+            if (audiomanager != null && gunshotSound != null)
+            {
+                audiomanager.PlaySFX(gunshotSound);
+                currentAmmo--;
+            }
+            
+        }
+        if (Input.GetKeyDown(KeyCode.R) && currentAmmo < 12)
+        {
+            currentAmmo = 12;
+            audiomanager.PlaySFX(reloadSound);
+        }
+
+        UpdateAmmoText();
+    }
+
     public void Shoot(Animator animator, Transform firePoint, GameObject bulletPrefab) {
-        // Überprüfe, ob noch Kugeln im Magazin sind
+        // ï¿½berprï¿½fe, ob noch Kugeln im Magazin sind
         if (currentAmmo > 0) {
             if (bulletPrefab != null && firePoint != null) {
                 Debug.Log("Prefab and firepoint");
-                // Setzt den Trigger für die Animation
+                // Setzt den Trigger fï¿½r die Animation
                 animator.SetTrigger("Shoot");
                 // Reduziere die Anzahl der Kugeln im Magazin
                 currentAmmo--;
@@ -30,40 +67,42 @@ public class Pistol : MonoBehaviour, IWeapon {
                 GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
                 // Greife auf das Bullet-Skript zu und setze den Schaden
                 Bullet bulletScript = bullet.GetComponent<Bullet>();
+                
                 if (bulletScript != null) {
                     bulletScript.InitializeBullet(damage, speed);
+                    
                 }
             }
         } else {
-            //Sound für leeres Magazin abspielen
+            //Sound fï¿½r leeres Magazin abspielen
             Debug.Log("Leeres Magazin!");
         }
     }
 
     public void Reload(Animator animator) {
-        // Überprüfe, ob das Magazin bereits voll ist
+        // ï¿½berprï¿½fe, ob das Magazin bereits voll ist
         if (currentAmmo == magazineSize) {
             Debug.Log("Das Magazin ist bereits voll!");
             return;
         }
-        // Berechne die Anzahl der Patronen, die nachgeladen werden können
+        // Berechne die Anzahl der Patronen, die nachgeladen werden kï¿½nnen
         additionalAmmo = magazineSize - currentAmmo;
-        // Debug-Ausgabe für Überprüfung
+        // Debug-Ausgabe fï¿½r ï¿½berprï¿½fung
         Debug.Log("Remaining Ammo: " + remainingAmmo);
         Debug.Log("Additional Ammo: " + additionalAmmo);
-        // Überprüfe, ob der Spieler noch genügend zusätzliche Munition hat
+        // ï¿½berprï¿½fe, ob der Spieler noch genï¿½gend zusï¿½tzliche Munition hat
         if (remainingAmmo >= additionalAmmo) {
             animator.SetTrigger("Reload");
-            // Der Spieler hat genug Munition, um das Magazin aufzufüllen
+            // Der Spieler hat genug Munition, um das Magazin aufzufï¿½llen
             currentAmmo = magazineSize;
             remainingAmmo -= additionalAmmo;
-            Debug.Log("Magazin aufgefüllt!");
+            Debug.Log("Magazin aufgefï¿½llt!");
         } else {
             animator.SetTrigger("Reload");
-            // Der Spieler hat nicht genug Munition, um das Magazin vollständig aufzufüllen
+            // Der Spieler hat nicht genug Munition, um das Magazin vollstï¿½ndig aufzufï¿½llen
             currentAmmo += remainingAmmo;
             remainingAmmo = 0;
-            Debug.Log("Magazin teilweise aufgefüllt!");
+            Debug.Log("Magazin teilweise aufgefï¿½llt!");
         }
         remainingAmmo = magazineSize; //Unendlich Muniton
         // Debug-Ausgabe am Ende der Reload-Funktion
@@ -71,10 +110,10 @@ public class Pistol : MonoBehaviour, IWeapon {
         Debug.Log("Magazin nachgeladen!");
     }
 
-    //magazineSize Größe des Magazins
+    //magazineSize Grï¿½ï¿½e des Magazins
     //currentAmmo Momentanes Magazin
     //additionalAmmo Nachzuladene Kugeln
-    //remainingAmmo Übrige Muniton
+    //remainingAmmo ï¿½brige Muniton
 
     public void SetDamage(int newDamage) {
         damage = newDamage;
@@ -84,6 +123,12 @@ public class Pistol : MonoBehaviour, IWeapon {
     }
     public void SetFireRate(int newFireRate) {
         fireRate = newFireRate;
+    }
+
+    void UpdateAmmoText()
+    {
+        ammoText.text = $"{currentAmmo}/\u221e";
+        
     }
    
 }
