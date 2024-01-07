@@ -8,32 +8,28 @@ public class GameManagerScript : MonoBehaviour
 {
    
     public GameObject gameOverUI;
+    public static GameManagerScript instance;
+    public TMP_Text coinText;
+    public int currentCoins = 0;
 
-    [SerializeField] public CoinText coinText;
-
-    private int coinCount;
-
-    private void OnEnable()
+    public void Awake()
     {
-        //coinCount.OnCoinCollected += HandleCoinPickup;
+        instance = this;
     }
 
-    private void OnDisable()
-    {
-        //coinCount.CoinCollected -= HandleCoinPickup;
-    }
-
-    void HandleCoinPickup()
-    {
-        coinCount++;
-        coinText.IncrementCoinCount(coinCount);
-    }
 
     // Start is called before the first frame update
     void Start()
     {
-       // Cursor.visible = false;
+        coinText.text = "SCORE: " + currentCoins.ToString();
+        // Cursor.visible = false;
         //Cursor.lockState = CursorLockMode.Locked;
+    }
+    
+    public void IncreaseCoins(int v){
+        currentCoins += v;
+        coinText.text = "SCORE: " + currentCoins.ToString();
+
     }
 
     // Update is called once per frame
@@ -55,4 +51,6 @@ public class GameManagerScript : MonoBehaviour
     {
         gameOverUI.SetActive(true);
     }
+    
+   
 }
