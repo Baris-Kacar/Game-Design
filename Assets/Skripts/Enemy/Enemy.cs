@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    public static event Action OnCoinCollected;
+    
     public int health = 100;
     public int damage = 20; // Adjust the damage as needed
     public GameObject deathEffect;
@@ -37,7 +39,7 @@ public class Enemy : MonoBehaviour
             
             Die();
             animator.SetTrigger("Death");
-            ScoreScript.scoreValue += 10;
+           // ScoreScript.score += 10;
         }
     }
 

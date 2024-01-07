@@ -141,6 +141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverUI: {fileID: 682090112}
+  coinText: {fileID: 0}
 --- !u!1 &134915653
 GameObject:
   m_ObjectHideFlags: 0
@@ -1085,9 +1086,8 @@ GameObject:
   - component: {fileID: 642590685}
   - component: {fileID: 642590688}
   - component: {fileID: 642590687}
-  - component: {fileID: 642590686}
   m_Layer: 5
-  m_Name: ScoreText
+  m_Name: CoinText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1112,19 +1112,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -165.14001}
   m_SizeDelta: {x: 203.77, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &642590686
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 642590684}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 885752489444d4310978fdc2fe5d6f17, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  score: {fileID: 0}
 --- !u!114 &642590687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2171,6 +2158,8 @@ GameObject:
   - component: {fileID: 969020924}
   - component: {fileID: 969020927}
   - component: {fileID: 969020928}
+  - component: {fileID: 969020930}
+  - component: {fileID: 969020929}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2335,6 +2324,33 @@ MonoBehaviour:
   moveSpeed: 3
   attackCooldown: 3
   bossPrefab: {fileID: 7105051040398005567, guid: 57a3a1f25b3971f4c8234a2adaae0a17, type: 3}
+--- !u!114 &969020929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 969020919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74fab4b20b6cc40f9a96334f8c6992fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinText: {fileID: 0}
+--- !u!114 &969020930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 969020919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 885752489444d4310978fdc2fe5d6f17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 0}
+  score: 0
 --- !u!224 &1040765093 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 9029004574686805717, guid: ea5c8a6785c572044ac15674063abb28, type: 3}
