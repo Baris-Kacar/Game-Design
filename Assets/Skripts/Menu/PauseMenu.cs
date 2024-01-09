@@ -6,7 +6,9 @@ using UnityEngine;
 public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
+    private bool gamePaused = false; //gameover
     public GameObject pauseMenuUI;
+    public GameObject gameOverUI;
 
     void Update() {
         if (Input.GetKeyDown(KeyCode.Escape)) {
@@ -41,6 +43,10 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
+    }
+    public void gameOver()
+    {
+        gameOverUI.SetActive(true);
     }
 }
 //Color: 606060

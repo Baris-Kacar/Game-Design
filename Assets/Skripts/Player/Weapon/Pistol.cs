@@ -20,6 +20,7 @@ public class Pistol : MonoBehaviour, IWeapon {
     
     void Start()
     {
+        
         if (ammoText == null)
         {
             Debug.LogError("Ammo Text not assigned in the insepctor");
@@ -36,21 +37,23 @@ public class Pistol : MonoBehaviour, IWeapon {
             nextFireTime = Time.time + 1f / fireRate; // Setze die n�chste m�gliche Schusszeit
         }
         Debug.Log(currentAmmo);
-        if (Input.GetButtonDown("Fire1") && currentAmmo > 0)
+        if (Input.GetButtonDown("Fire1") && currentAmmo > 0 || Input.GetMouseButtonDown(0) && currentAmmo > 0)
         {
             if (audiomanager != null && gunshotSound != null)
             {
                 audiomanager.PlaySFX(gunshotSound);
                 currentAmmo--;
+                
             }
             
         }
-        if (Input.GetKeyDown(KeyCode.R) && currentAmmo < 12)
+        if (Input.GetKeyDown(KeyCode.R) && currentAmmo < 12 || currentAmmo == 0)
         {
             currentAmmo = 12;
+           
             audiomanager.PlaySFX(reloadSound);
         }
-
+    
         UpdateAmmoText();
     }
 
@@ -73,7 +76,10 @@ public class Pistol : MonoBehaviour, IWeapon {
                     
                 }
             }
-        } else {
+        } else
+        {
+            currentAmmo = 12;
+            animator.SetTrigger("Reload");
             //Sound f�r leeres Magazin abspielen
             Debug.Log("Leeres Magazin!");
         }
@@ -91,10 +97,10 @@ public class Pistol : MonoBehaviour, IWeapon {
         Debug.Log("Remaining Ammo: " + remainingAmmo);
         Debug.Log("Additional Ammo: " + additionalAmmo);
         // �berpr�fe, ob der Spieler noch gen�gend zus�tzliche Munition hat
-        if (remainingAmmo >= additionalAmmo) {
+        if (remainingAmmo >= additionalAmmo ) {
             animator.SetTrigger("Reload");
             // Der Spieler hat genug Munition, um das Magazin aufzuf�llen
-            currentAmmo = magazineSize;
+            currentAmmo = magazineSize; 
             remainingAmmo -= additionalAmmo;
             Debug.Log("Magazin aufgef�llt!");
         } else {

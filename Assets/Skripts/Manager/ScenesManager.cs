@@ -27,6 +27,10 @@ public class ScenesManager : MonoBehaviour
     public void LoadMainMenu() {
         SceneManager.LoadScene(Scene.MainMenu.ToString());
     }
+   public void LoadMainMenuScene()
+    {
+        SceneManager.LoadScene(Scene.MainMenu.ToString());
+    }
     public void Restart() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }

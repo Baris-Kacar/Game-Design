@@ -16,11 +16,11 @@ public class PlayerMovement: MonoBehaviour {
 
     private Shotgun shotgun; // Referenz zum Shotgun-Skript
     private bool shotgunUnlocked = false; // Zeigt an, ob die Schrotflinte freigeschaltet ist
-    private int requiredPointsForShotgun = 100; // Beispiel: Der Spieler benötigt 100 Punkte, um die Schrotflinte freizuschalten
+    private int requiredPointsForShotgun = 100; // Beispiel: Der Spieler benï¿½tigt 100 Punkte, um die Schrotflinte freizuschalten
 
     private AssaultRifle assualtrifle; // Referenz zum AssaultRifle-Skript
     private bool assualtrifleUnlocked = false; // Zeigt an, ob die AssaultRifle freigeschaltet ist
-    private int requiredPointsForAssualtRifle = 200; // Beispiel: Der Spieler benötigt 200 Punkte, um die AssaultRifle freizuschalten
+    private int requiredPointsForAssualtRifle = 200; // Beispiel: Der Spieler benï¿½tigt 200 Punkte, um die AssaultRifle freizuschalten
 
     private Animator animator;
     private TrailRenderer trailrenderer;
@@ -37,11 +37,11 @@ public class PlayerMovement: MonoBehaviour {
         animator = GetComponent<Animator>();
         // Weise der Variable trailrenderer einen Wert zu
         trailrenderer = GetComponent<TrailRenderer>();
-        // Überprüfe, ob der Animator gefunden wurde
+        // ï¿½berprï¿½fe, ob der Animator gefunden wurde
         if (animator == null) {
             Debug.LogError("Animator not found! Make sure the Animator component is attached to the GameObject.");
         }
-        // Überprüfe, ob der TrailRenderer gefunden wurde
+        // ï¿½berprï¿½fe, ob der TrailRenderer gefunden wurde
         if (trailrenderer == null) { 
             Debug.LogError("TrailRenderer not found! Make sure the TrailRenderer component is attached to the GameObject.");
         }
@@ -63,15 +63,15 @@ public class PlayerMovement: MonoBehaviour {
         animator.SetFloat("SpeedH", Mathf.Abs(horizontalMove));
         animator.SetFloat("SpeedV", Mathf.Abs(verticalMove));
 
-        // Dash, wenn Left Shift gedrückt wird
+        // Dash, wenn Left Shift gedrï¿½ckt wird
         if (Input.GetButtonDown("Jump") && !isDashing) {
             Dash();
         }
-        // Schießt, wenn die Leertaste gedrückt wird
-        if (Input.GetButtonDown("Fire1")) {
+        // Schieï¿½t, wenn die Leertaste gedrï¿½ckt wird
+        if (Input.GetButtonDown("Fire1") || Input.GetMouseButtonDown(0)) {
             Shoot();
         }
-        // Wechselt die Waffe, wenn die Taste für den Waffenwechsel gedrückt wird (z.B., Tasten "1,2,3")
+        // Wechselt die Waffe, wenn die Taste fï¿½r den Waffenwechsel gedrï¿½ckt wird (z.B., Tasten "1,2,3")
         if (Input.GetKeyDown(KeyCode.Alpha1)) {
             animator.SetTrigger("Weapon_Change");
             SwitchWeapon(0); // Waffe 1 (Pistol)
@@ -106,26 +106,26 @@ public class PlayerMovement: MonoBehaviour {
     }
     void Dash() {
         isDashing = true;
-        // Speichere die ursprüngliche Laufgeschwindigkeit
+        // Speichere die ursprï¿½ngliche Laufgeschwindigkeit
         float originalRunSpeed = runSpeed;
-        // Erhöhe die Laufgeschwindigkeit für den Sprint
+        // Erhï¿½he die Laufgeschwindigkeit fï¿½r den Sprint
         runSpeed = dashSpeed;
-        // Deaktiviere die Kollision mit dem EnemyLayer während des Dashes
+        // Deaktiviere die Kollision mit dem EnemyLayer wï¿½hrend des Dashes
         Physics2D.IgnoreLayerCollision(gameObject.layer, gameObject.layer, true);
         // Trail aktivieren
         trailrenderer.emitting = true;
         // Setze die Lebensdauer des Trails
         trailrenderer.time = 0.2f; 
-        // Setze die Laufgeschwindigkeit nach dem Sprint zurück
+        // Setze die Laufgeschwindigkeit nach dem Sprint zurï¿½ck
         StartCoroutine(ResetDash(originalRunSpeed));
     }
     IEnumerator ResetDash(float originalRunSpeed) {
-        yield return new WaitForSeconds(0.2f); // Pausiere für die Dauer des Sprints (Anpassung nach Bedarf)
+        yield return new WaitForSeconds(0.2f); // Pausiere fï¿½r die Dauer des Sprints (Anpassung nach Bedarf)
 
         runSpeed = originalRunSpeed;
         // Deaktiviere den Trail
         trailrenderer.emitting = false;
-        // Aktiviert die Kollision mit dem EnemyLayer während des Dashes
+        // Aktiviert die Kollision mit dem EnemyLayer wï¿½hrend des Dashes
         Physics2D.IgnoreLayerCollision(gameObject.layer, gameObject.layer, false);
         // Wartezeit, bevor die Kollision mit dem EnemyLayer wieder aktiviert wird
         yield return new WaitForSeconds(1f);
@@ -140,7 +140,7 @@ public class PlayerMovement: MonoBehaviour {
     IEnumerator DelayedWeaponSwitch() {
         yield return new WaitForSeconds(0.5f);
         SetCurrentWeapon(); // Aktualisiert die aktuelle Waffe
-        Debug.Log($"Switched to {currentWeapon.GetType().Name}"); // Gibt den Namen der aktuellen Waffe aus (nützlich für Debugging)
+        Debug.Log($"Switched to {currentWeapon.GetType().Name}"); // Gibt den Namen der aktuellen Waffe aus (nï¿½tzlich fï¿½r Debugging)
     }
     void SetCurrentWeapon() {
         // Setzt die Referenz zur aktuellen Waffe
@@ -156,7 +156,7 @@ public class PlayerMovement: MonoBehaviour {
             currentWeapon.Reload(animator);
         } else {
             Debug.Log(currentWeapon);
-            Debug.Log("Nachladen nicht möglich.");
+            Debug.Log("Nachladen nicht mï¿½glich.");
         }
     }
 }

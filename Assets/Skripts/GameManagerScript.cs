@@ -63,4 +63,12 @@ public class GameManagerScript : MonoBehaviour
         gamePaused = true;
         instructionsPanel.SetActive(true);
     }
+    public void Quit()
+    {
+        
+        //ScenesManager.Instance.LoadMainMenu();
+        ScenesManager.Instance.LoadMainMenuScene();
+
+    }
+
 }
