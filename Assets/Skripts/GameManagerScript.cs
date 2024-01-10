@@ -56,14 +56,14 @@ public class GameManagerScript : MonoBehaviour
     public void ResumeGame()
     {
         Time.timeScale = 1f;
-        instructionsPanel.SetActive(false);
+        //instructionsPanel.SetActive(false);
     }
 
     public void PauseGame()
     {
         Time.timeScale = 0f;
-        gamePaused = true;
-        instructionsPanel.SetActive(true);
+        //gamePaused = true;
+        //instructionsPanel.SetActive(true);
     }
     public void Quit()
     {

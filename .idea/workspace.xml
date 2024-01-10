@@ -2,18 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7b46e6a-6994-4203-9b0c-786758bd4fa9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Skripts/Coin.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScoreScript.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScoreScript.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Skripts/Coin.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Skripts/Enemy/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Skripts/Enemy/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Zombie.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Zombie.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Skripts/GameManagerScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Skripts/GameManagerScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/barbershop/composer.json</pharConfigPath>
     <execution />
   </component>
   <component name="Git.Settings">
@@ -32,6 +33,8 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Anass/PhpstormProjects&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -46,6 +49,9 @@
       <workItem from="1704813095103" duration="29000" />
       <workItem from="1704813255161" duration="87000" />
       <workItem from="1704813447906" duration="6000" />
+      <workItem from="1704833746042" duration="139000" />
+      <workItem from="1704833958817" duration="99000" />
+      <workItem from="1704913837141" duration="7000" />
     </task>
     <servers />
   </component>
