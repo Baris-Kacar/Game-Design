@@ -11,14 +11,19 @@ public class Enemy : MonoBehaviour
     public int damage = 20; // Adjust the damage as needed
     public GameObject deathEffect;
     private Animator animator;
+    
 
     public void Start() {
-        animator = GetComponent<Animator>();
-        if (animator == null)
-        {
-            Debug.LogError("Animator not found! Make sure the Animator component is attached to the GameObject.");
-        }
+        
     }
+
+    public void Awake()
+    {
+        
+    
+    }
+    
+    
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -36,17 +41,28 @@ public class Enemy : MonoBehaviour
     {
         health -= damage;
         if (health <= 0) {
-            
+
+            if (animator == null)
+            {
+                animator = GetComponent<Animator>();
+                if (animator == null)
+                {
+                    Debug.LogError("Animator not found Line 57");
+                }
+            }
             Die();
-            animator.SetTrigger("Death");
            // ScoreScript.score += 10;
         }
     }
 
     void Die()
     {
-        Instantiate(deathEffect, transform.position, Quaternion.identity);
-        Destroy(gameObject);
+        if (animator != null)
+        {
+            animator.SetTrigger("Death");
+        }
+        //Instantiate(deathEffect, transform.position, Quaternion.identity);
+       // Destroy(gameObject);
     }
     
 }
